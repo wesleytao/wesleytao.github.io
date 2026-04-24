@@ -53,7 +53,7 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Wesley Tao</h1>
-            <h2>Machine Learning Engineer</h2>
+            <h2>Staff ML Scientist</h2>
             <a href="file/Wesley_Tao_Resume_20260209.docx" class="btn-rounded-white">Download Resume</a>
         </div>
         <!-- End #lead-content -->
@@ -96,7 +96,35 @@
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-          <div data-date="february 2019 – Now">
+          <div data-date="June 2020 – Present">
+              <h3>PayPal</h3>
+              <h4>Staff ML Scientist <span style="font-weight:300;font-size:0.85em;">(Data Scientist → MTS1 MLE → Manager → Staff ML Scientist)</span></h4>
+              <p>San Jose, CA</p>
+              <p><strong>Customer-Facing PayPal Assistant Agent | SLM + Tool Calling</strong></p>
+              <ul>
+                  <li>Integrated an in-house open-source SLM challenger into a production customer-service digital agent (disputes, payment holds/declines, account limitations) with tool-grounded execution; challenger in employee A/B testing with comparable quality at materially lower p90 latency and cost.</li>
+                  <li>Single-threaded ML owner for the SLM track; drove key architecture tradeoffs (single vs. multi-agent, tool adapter strategy, MCP vs. direct APIs, transcript-based evaluation) with Eng/PM and translated decisions into a shippable plan.</li>
+                  <li>Shaped the multi-agent "swarm" approach: central orchestrator/router delegates to domain sub-agents; scaled to 8 sub-agents (10–12 tools each) with a roadmap to 30+ sub-agents and 108 legacy API conversions.</li>
+                  <li>Owned Manage Bank sub-agent end-to-end (tool schemas, synthetic/fine-tuning data, offline simulation, prompt/model iteration), exceeding production baseline task success.</li>
+                  <li>Built offline evaluation + regression stack via transcript replay/user simulation; defined pre-prod gates for task success, tool-call correctness, hallucination control, and grounded synthesis.</li>
+                  <li>+12% task success across 8 agents via rule-driven synthetic data + targeted fine-tuning; reduced p95 single-turn latency 6.0s → 1.2s via model compression and consolidating multi-call flows into single-call execution.</li>
+              </ul>
+              <p><strong>Teammate Smart Reply (Agent Assist for Customer Support)</strong></p>
+              <ul>
+                  <li>Led GenAI Smart Reply from prototype to production, reducing average handle time (AHT) by ~10s and recontact rate by ~10% through iterative model/prompt and product tuning.</li>
+                  <li>Improved Smart Reply coverage by +7% by expanding RAG sources to include customer-facing email/chat templates; used LLM summarization to normalize content into agent-style replies.</li>
+                  <li>Built retrieval evaluation for RAG using gold human-labeled query→doc relevance and silver click-through labels; tracked nDCG and offline regressions to tune retrieval quality.</li>
+                  <li>Built an end-to-end feedback and evaluation pipeline (adoption, human edit distance, regression test pass rate), improving iteration safety across prompt/model releases.</li>
+              </ul>
+              <p><strong>Patents &amp; Other Projects</strong></p>
+              <ul>
+                  <li>Patent filed (Dec 2025): System and Method for Conversational Workflow via an AI-Driven Schema — schema-driven, multi-turn conversational workflows for reliable tool-grounded task completion.</li>
+                  <li>Fine-tuned GPT-3.5 for PayPal Assistant using RAFT-style data strategies (2023); achieved near-GPT-4 quality on hallucination rate and reply quality, delivering $3M+ annualized savings; patent filed.</li>
+                  <li>Explainable AI (XAI) for PayPal's flagship Seller Fraud Models (2022): built tree-SHAP and two-layer reason code mapping; adopted in production enabling 678K txns/yr, 31K contacts savings, and $95K margin uplift.</li>
+              </ul>
+          </div>
+
+          <div data-date="February 2019 – May 2020">
               <h3>Ushur Inc</h3>
               <h4>Data Scientist</h4>
               <p>
@@ -154,8 +182,8 @@ oil commodity future trading strategy
 
         <div class="education-block">
             <h3>Columbia University in the City of New York</h3>
-            <span class="education-date">Sept 2017 - Dec 2018</span>
-            <h4>Master of Arts in Statistics,GPA 3.92</h4>
+            <span class="education-date">Sept 2017 – Jan 2019</span>
+            <h4>Master of Arts in Statistics, GPA 3.92</h4>
           <ul>
             <li>
                 CSOR4103: Analysis of Algorithm
@@ -171,9 +199,9 @@ oil commodity future trading strategy
         <!-- End .education-block -->
 
         <div class="education-block">
-            <h3>University of Fudan</h3>
-            <span class="education-date">Sept 2012 - Sept 2017</span>
-            <h4>Bachelor of Arts in International Finance, GPA 3.53</h4>
+            <h3>Fudan University</h3>
+            <span class="education-date">Sept 2012 – July 2017</span>
+            <h4>Bachelor of Arts in Economics, GPA 3.53</h4>
             <ul>
                 <li>
                   Strong performance in the courses: Data Structure, Econometrics, Applied Statistics Tools, Advanced Mathematics
@@ -267,31 +295,21 @@ oil commodity future trading strategy
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
-
-            <li>Tableau</li>
-            <li>MongoDb</li>
-            <li>Scikit-Learn</li>
-            <li>SQL</li>
             <li>Python</li>
-            <li>R</li>
-            <li>keras</li>
-            <li>Opencv</li>
+            <li>SQL</li>
             <li>Git</li>
-            <li>Financial Analysis</li>
-            <li>Image Analysis</li>
-            <li>Natural Language Processing</li>
-
-              <!-- <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li> -->
+            <li>Bash</li>
+            <li>Multi-agent Architecture</li>
+            <li>Prompt Engineering</li>
+            <li>Fine-tuning (LoRA/QLoRA)</li>
+            <li>RAG</li>
+            <li>RLHF / DPO</li>
+            <li>vLLM</li>
+            <li>Evaluation Pipelines</li>
+            <li>DNN / Embeddings</li>
+            <li>tree-SHAP</li>
+            <li>Causal ML</li>
+            <li>Scikit-Learn</li>
         </ul>
     </div>
     <!-- End #skills -->
